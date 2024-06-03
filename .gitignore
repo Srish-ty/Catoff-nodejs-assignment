@@ -1,0 +1,6 @@
+.env
+
+node_modules
+
+node-nest-project/node_modules
+/node-nest-project/node_modules
