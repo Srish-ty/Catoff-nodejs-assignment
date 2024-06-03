@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AppController } from './app.controller.js'; // Assuming the controller file is a JavaScript file
+import { AppController } from './app.controller.js';
 
 describe('AppController', () => {
   let controller;
