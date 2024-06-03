@@ -1,5 +1,5 @@
-const { Controller, Get } = require('@nestjs/common');
-const { AppService } = require('./app.service');
+import { Controller, Get } from '@nestjs/common';
+import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
@@ -12,4 +12,3 @@ export class AppController {
     return this.appService.getHello();
   }
 }
-
