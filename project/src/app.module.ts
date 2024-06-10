@@ -2,10 +2,12 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { WalletsModule } from './wallets/wallets.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+
 
 import * as dotenv from 'dotenv';
 dotenv.config();
-
 
 @Module({
   imports: [
@@ -21,7 +23,8 @@ dotenv.config();
     }),
     UsersModule,
     WalletsModule,
-    WalletsModule,
   ],
+  controllers: [AppController], 
+  providers: [AppService],
 })
 export class AppModule {}
