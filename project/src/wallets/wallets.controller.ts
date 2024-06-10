@@ -7,7 +7,7 @@ import { UpdateWalletDto } from './dto/update-wallet.dto';
 export class WalletsController {
   constructor(private readonly walletsService: WalletsService) {}
 
-  @Post()
+  @Post('/create')
   create(@Body() createWalletDto: CreateWalletDto) {
     return this.walletsService.create(createWalletDto);
   }
@@ -22,12 +22,12 @@ export class WalletsController {
     return this.walletsService.findOne(+id);
   }
 
-  @Put(':id')
+  @Put('/update/:id')
   update(@Param('id') id: string, @Body() updateWalletDto: UpdateWalletDto) {
     return this.walletsService.update(+id, updateWalletDto);
   }
 
-  @Delete(':id')
+  @Delete('/delete/:id')
   remove(@Param('id') id: string) {
     return this.walletsService.remove(+id);
   }
